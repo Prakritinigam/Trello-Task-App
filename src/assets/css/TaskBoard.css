@@ -1,0 +1,164 @@
+.header {
+  display: flex;
+  justify-content: right;
+  float: right;
+}
+
+.modal-bootstrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeInOverlay 0.3s ease-out forwards;
+}
+
+.modal-dialog.dialog {
+  position: relative;
+  max-width: 500px;
+  transform: translateY(-50%);
+  animation: slideIn 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  align-items: left;
+  animation: fadeInModal 0.3s ease-out forwards;
+}
+.modal-body {
+  text-align: left;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body {
+  padding: 15px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+}
+
+.cool {
+  margin-top: 100px;
+}
+.column {
+  background-color: #f8f9fa;
+  padding: 10px;
+  min-height: 300px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+.column {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.task-card {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f98837, #de2880);
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 15px;
+  color: white;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+  border-left: 4px solid #007bff;
+}
+
+.task-card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.task-card p {
+  color: #f2f2f2;
+}
+
+.task-card .btn {
+  opacity: 0.8;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.task-card:hover .btn {
+  opacity: 1;
+  background-color: white;
+  color: #333;
+}
+.task-card:active {
+  background-color: #dcdcdc;
+}
+
+.column h3 {
+  text-align: center;
+}
